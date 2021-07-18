@@ -1,0 +1,14 @@
+﻿@model ToDoModel;
+@{
+    ViewData["Title"] = "DelToDo";
+}
+
+<h1>Delete ToDo</h1>
+
+<form action="/home/deltodo" method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" asp-for="Name" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

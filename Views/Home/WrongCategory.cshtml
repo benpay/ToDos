@@ -1,0 +1,11 @@
+﻿@model ToDoModel;
+@{
+    ViewData["Title"] = "ListToDo";
+    ToDoModel todo = TempData["todoTemp"] as ToDoModel;
+}
+
+<h1>Wrong Category</h1>
+
+<div class="form-group">
+    <label>The category entered is incorrect, please see the list of Categories</label>
+</div>

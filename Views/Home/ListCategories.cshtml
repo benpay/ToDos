@@ -1,0 +1,44 @@
+﻿@model CategoryModel;
+@{
+    ViewData["Title"] = "ListCategories";
+    List<CategoryModel> categories = TempData["categories"] as List<CategoryModel>;
+}
+
+<h1>Categories</h1>
+
+<h3>Filter</h3>
+<div class="container">
+    @if (categories != null && categories.Count > 0)
+    {
+    <form action="/Home/SearchCategories" method="post">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" asp-for="Name" />
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+    </form>
+
+        <h3>List Categories</h3>
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in categories)
+                {
+                    <tr>
+                        <td>@category.Name</td>
+                        <td>
+                            <form asp-action="UpdateCategory" method="post">
+                                <input type="hidden" asp-for="Id" value="@category.Id" />
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

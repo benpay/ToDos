@@ -1,0 +1,14 @@
+﻿@model CategoryModel;
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<h1>Add Category</h1>
+
+<form action="/home/addcategory" method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" asp-for="Name" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

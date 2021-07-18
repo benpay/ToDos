@@ -1,0 +1,16 @@
+﻿@model CategoryModel;
+@{
+    ViewData["Title"] = "UpdateCategory";
+    CategoryModel category = TempData["categoryTemp"] as CategoryModel;
+}
+
+<h1>Update Category</h1>
+
+<form action="/home/updatecategoryfinal" method="post">
+    <input type="hidden" asp-for="Id" value="@category.Id" />
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" asp-for="Name" value="@category.Name" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

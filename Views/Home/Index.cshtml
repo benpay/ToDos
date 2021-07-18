@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to ToDos App Saal</h1>
+    <h2>Requirements</h2>
+    <p style="text-align:left;">
+        The goal is to create a system to manage To-Dos which includes the following functions: <br />
+        - Add, remove or edit categories<br />
+        - Add, remove, edit To-Dos and assign them to one category<br />
+        - Search by objects<br />
+        - All data must be serializable/storable -> for this, please choose the format you prefer (data base, XML, JSON, etc.)<br />
+        - For every action, you must create end points that send the data to the clients. No logic should need to be present in the client..
+    </p>
+
+    <h2>Implementation</h2>
+    <p style="text-align: left;">
+        This webpage contains the required implementation with a simple design to test endpoints created.<br />
+        - The 3 first buttons are related to Categories, and to edit a Category we can do it inside List Categories.<br />
+        - The 3 last buttons are related to ToDos, and to edit a ToDo we can do it inside List ToDos.<br />
+        - Categories can be searched by name (unique field) and ToDos can be searched by Name, Description, Category or a combination of them. <br />
+        - All data are stored in a sqlite database and implemented with codefirst pattern. To run the application in local you may need install Sqlite.Framework. <br />
+        - Each action on this webpage are controlled my individual endpoints.
+    </p>
+</div>
